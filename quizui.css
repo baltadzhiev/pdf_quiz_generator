@@ -1,0 +1,58 @@
+
+form  {
+	margin: 0;
+}
+
+#leftPanel {
+	float: left;
+	width: 250px;
+	border: 1px solid grey;
+	margin-top: 10%;
+	
+}
+
+#qBankMenu {
+	height: auto;
+	width: 97%;
+	border: 1px solid grey;
+	margin: 3px auto;
+}
+
+#rightPanel {
+	min-height: 600px;
+	height: auto;
+	min-width: 600px;
+	float: left;
+	overflow: auto;
+	margin-left: 5%;
+	border: 1px solid grey;
+	border-radius: 20px;
+}
+
+#qSelect {
+	width: 97%;
+	margin: 0 auto;
+	padding: 0;
+	border: 1px solid grey;
+}
+
+#qList {
+	width: 97%;
+	margin: 0 auto;
+}
+
+.questionBox {
+	width: 100%;
+	border: 1px solid grey;
+	opacity: .8;
+	margin: 5px auto;
+}
+
+li {
+	display: inline;
+}
+
+h4 {
+	margin: 0;
+	text-align: center;
+}
