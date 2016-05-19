@@ -3,6 +3,11 @@ form  {
 	margin: 0;
 }
 
+th {
+	margin-bottom: 100px;
+}
+
+
 #leftPanel {
 	float: left;
 	width: 250px;
@@ -21,12 +26,11 @@ form  {
 #rightPanel {
 	min-height: 600px;
 	height: auto;
-	min-width: 600px;
+	min-width: 500px;
 	float: left;
 	overflow: auto;
 	margin-left: 5%;
-	border: 1px solid grey;
-	border-radius: 20px;
+	
 }
 
 #qSelect {
@@ -36,17 +40,12 @@ form  {
 	border: 1px solid grey;
 }
 
-#qList {
-	width: 97%;
-	margin: 0 auto;
+#questionTable {
+	width: auto;
+	min-width: 400px;
+	margin: auto;
 }
 
-.questionBox {
-	width: 100%;
-	border: 1px solid grey;
-	opacity: .8;
-	margin: 5px auto;
-}
 
 li {
 	display: inline;
@@ -56,3 +55,17 @@ h4 {
 	margin: 0;
 	text-align: center;
 }
+
+
+.qCheckBox {
+	margin-left: 30%
+}
+
+.qName {
+	text-align: left;
+}
+
+.qType {
+	text-align: right;
+}
+
