@@ -1,5 +1,5 @@
 var bcounter = 0;
-
+var pageCounter = 0;
 function addQuestion (){
 	
 	var questionId = ++bcounter;
@@ -21,7 +21,7 @@ function addQuestion (){
 	//QUESTION NAME
 	var qName = document.createElement("td");
 	qName.setAttribute("class", "qName")
-	var qNameText = document.createTextNode("Question");
+	var qNameText = document.createTextNode("Question" + questionId);
 	qName.appendChild(qNameText);
 
 	//QUESTION TYPE
@@ -36,5 +36,24 @@ function addQuestion (){
 	qTableRow.appendChild(qType);
 	
 }
+
+function addPage () {
+	
+	
+	var questionPages = document.getElementById("questionPages");
+	
+	
+	
+	//TABLE ROW
+	var qPage = document.createElement("li");
+	qPage.setAttribute("class", "qPage");
+	
+	var qPageNumber = document.createTextNode(++pageCounter);
+	
+	qPage.appendChild(qPageNumber);
+	questionPages.appendChild(qPage);
+};
 for (var i = 0; i < 10; i++)
 addQuestion ();
+for (var i = 0; i < 5; i++)
+addPage();

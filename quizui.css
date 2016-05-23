@@ -1,4 +1,6 @@
-
+p,h3 {
+	margin: 0 0 5px 0;
+}
 form  {
 	margin: 0;
 }
@@ -7,55 +9,44 @@ th {
 	margin-bottom: 100px;
 }
 
-
-#leftPanel {
-	float: left;
-	width: 250px;
-	border: 1px solid grey;
-	margin-top: 10%;
-	
-}
-
-#qBankMenu {
-	height: auto;
-	width: 97%;
-	border: 1px solid grey;
-	margin: 3px auto;
-}
-
 #rightPanel {
 	min-height: 600px;
-	height: auto;
-	min-width: 500px;
-	float: left;
-	overflow: auto;
+	width: 40%;
 	margin-left: 5%;
 	
+	
+}
+#quizDiv {
+	width: 100%;
 }
 
-#qSelect {
-	width: 97%;
-	margin: 0 auto;
-	padding: 0;
-	border: 1px solid grey;
+#quizName {
+	width: 75%;
+	padding: 5px;
 }
 
-#questionTable {
+#courseSelect {
 	width: auto;
-	min-width: 400px;
-	margin: auto;
+	max-width: 25%;
+	padding: 5px;
+	margin: 5px 10px 5px 10px;
 }
 
-
-li {
-	display: inline;
-}
-
-h4 {
-	margin: 0;
+#qList {
+	width: 100%;
 	text-align: center;
 }
 
+#questionTable {
+	width: 100%;
+	margin-top: 30px;
+}
+
+#questionPages {
+	width: auto;
+	padding: 0;
+	border-radius: 10px;
+}
 
 .qCheckBox {
 	margin-left: 30%
@@ -66,6 +57,22 @@ h4 {
 }
 
 .qType {
-	text-align: right;
+	text-align: center;
 }
 
+.qPage {
+	display: inline-block;
+	padding: 8px 16px;
+	border: 1px solid lightgrey;
+}
+
+.qPage:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+.qPage:last-child {
+	border-radius: 0 10px 10px 0;
+}
+.qPage:hover {
+	background-color: lightblue;
+}
