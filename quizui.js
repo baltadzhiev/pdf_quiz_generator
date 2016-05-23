@@ -16,7 +16,7 @@ function addQuestion (){
 	qCheckBox.setAttribute("class", "qCheckBox");
 	qCheckBox.setAttribute("type", "checkbox");
 	qCheckBox.setAttribute("name", "qCheckbox");
-	qCheckBox.setAttribute("value", "questionId");
+	qCheckBox.setAttribute("value", questionId);
 	
 	//QUESTION NAME
 	var qName = document.createElement("td");
