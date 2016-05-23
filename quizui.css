@@ -45,9 +45,14 @@ th {
 #questionPages {
 	width: auto;
 	padding: 0;
-	border-radius: 10px;
 }
 
+#submit {
+	color: white;
+	background-color: blue;
+	border: 0;
+	padding: 10px 25px 10px 25px;
+}
 .qCheckBox {
 	margin-left: 30%
 }
