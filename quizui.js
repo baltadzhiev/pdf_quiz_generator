@@ -43,8 +43,6 @@ function addPage () {
 	var questionPages = document.getElementById("questionPages");
 	
 	
-	
-	//TABLE ROW
 	var qPage = document.createElement("li");
 	qPage.setAttribute("class", "qPage");
 	
@@ -55,5 +53,5 @@ function addPage () {
 };
 for (var i = 0; i < 10; i++)
 addQuestion ();
-for (var i = 0; i < 5; i++)
+for (var i = 0; i < 10; i++)
 addPage();
