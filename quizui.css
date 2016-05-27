@@ -72,6 +72,10 @@ th {
 	border: 1px solid lightgrey;
 }
 
+.qpage:active {
+	background-color: red;
+}
+
 .qPage:first-child {
 	border-radius: 5px 0 0 5px;
 }

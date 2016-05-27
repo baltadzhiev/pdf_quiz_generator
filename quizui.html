@@ -13,7 +13,7 @@
 		<div id="rightPanel">
 			<h3>Модул за създаване на тестове</h3>
 			<p>Въведи заглавие на теста</p>
-			<form id="quizForm" method="get">
+			<!--<form id="quizForm" method="get">-->
 				<div id="quizDiv">
 					<input id="quizName" type="text" name="quizName">
 					<select id="courseSelect" name="courseSelect">
@@ -23,7 +23,6 @@
 						<option value="course3">Course 3</option>
 					</select>
 				</div>
-
 				<div id="qList">
 						<table id="questionTable">
 							<tr>
@@ -36,8 +35,8 @@
 						<ul id="questionPages">
 						</ul>
 				</div>
-				<input id="submit" type="submit">
-			</form>
+				<button id="submit" onclick="getChecked()">Button</button>
+			<!--</form> -->
 		</div>
 		<script src="quizui.js"></script>
 	</body>
