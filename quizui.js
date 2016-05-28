@@ -1,6 +1,6 @@
 
 pageCounter = 0;
-questionsPerPage = 10;
+questionsPerPage = 4;
 
 var qArray = [];
 
@@ -44,7 +44,7 @@ var questions = [
 			"course 1",
 			"course 4"
 		]
-	},
+	}
 ]
 
 function question (questionId, questionTitle, questionType){
@@ -129,8 +129,8 @@ function displayQuestions (startQ, inc = questionsPerPage) {
 		}
 	}
 	else {
-		for (var i = (startQ-1)*inc+1; i < (startQ*inc)+1 && i < questions.length; i++) {
-			qaArray[i].add();
+		for (var i = (startQ-1)*inc; i < (startQ*inc) && i < questions.length; i++) {
+			qArray[i].add();
 		}
 	}
 }
@@ -164,7 +164,7 @@ for (var i = 0; i < questions.length; i++) {
 displayQuestions(0);
 
 //ADD PAGES
-for (var i = 0; i < Math.ceil(questions.length/questionsPerPage); i++) {
+for (var i = 0; i < Math.ceil(qArray.length/questionsPerPage); i++) {
 	addPage();
 }
 
