@@ -1,6 +1,6 @@
 
 pageCounter = 0;
-questionsPerPage = 4;
+questionsPerPage = 2;
 
 var qArray = [];
 
@@ -56,7 +56,7 @@ function question (questionId, questionTitle, questionType){
 
 	
 	
-  	this.add = function () {
+  	this.add = function (isChecked) {
 		var questionTable = document.getElementById("questionTable");
 		
 		//TABLE ROW
@@ -71,7 +71,7 @@ function question (questionId, questionTitle, questionType){
 		qCheckBox.setAttribute("type", "checkbox");
 		qCheckBox.setAttribute("name", "qCheckbox");
 		qCheckBox.setAttribute("value", questionId);
-		qCheckBox.checked = true;
+		qCheckBox.checked = isChecked;
 		qCheckBox.onclick = function () {
 			for (var i = 0; i < qArray.length; i++) {
 				if (qArray[i].questionId == questionId){
@@ -125,12 +125,12 @@ function displayQuestions (startQ, inc = questionsPerPage) {
 	//ADD QUESTIONS
 	if (startQ == 0 || startQ == 1) {
 		for (var i = 0; i < inc && i < questions.length; i++) {
-			qArray[i].add();
+			qArray[i].add(qArray[i].isChecked);
 		}
 	}
 	else {
 		for (var i = (startQ-1)*inc; i < (startQ*inc) && i < questions.length; i++) {
-			qArray[i].add();
+			qArray[i].add(qArray[i].isChecked);
 		}
 	}
 }
