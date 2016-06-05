@@ -1,6 +1,6 @@
 
 pageCounter = 0;
-questionsPerPage = 2;
+questionsPerPage = 3;
 
 var qArray = [];
 
@@ -66,10 +66,11 @@ function question (questionId, questionTitle, questionType){
 		questionTable.appendChild(qTableRow)
 		
 		//CHECKBOX
-		var qCheckBox = document.createElement("input")
-		qCheckBox.setAttribute("class", "qCheckBox");
+		
+		var qCheckBoxTd = document.createElement("td");
+		qCheckBoxTd.setAttribute("class", "qCheckbox");
+		var qCheckBox = document.createElement("input");
 		qCheckBox.setAttribute("type", "checkbox");
-		qCheckBox.setAttribute("name", "qCheckbox");
 		qCheckBox.setAttribute("value", questionId);
 		qCheckBox.checked = isChecked;
 		qCheckBox.onclick = function () {
@@ -82,6 +83,7 @@ function question (questionId, questionTitle, questionType){
 				}
 			}
 		}
+		qCheckBoxTd.appendChild(qCheckBox);
 	
 		//QUESTION NAME
 		var qName = document.createElement("td");
@@ -95,23 +97,34 @@ function question (questionId, questionTitle, questionType){
 		var qTypeText = document.createTextNode(questionType);
 		qType.appendChild(qTypeText);
 		
+		//QUESTION ICON
+		var qIcon = document.createElement("td");
+		qIcon.setAttribute("class", "qIcon");
+		var qIconImage = document.createElement("img");
+		qIconImage.src = "http://moodle.simenta-bg.com/moodle29/theme/image.php/clean/qtype_essay/1463569866/icon";
+		qIcon.appendChild(qIconImage);
+		
 		//ADD TO TABLE ROW
-		qTableRow.appendChild(qCheckBox);
+		qTableRow.appendChild(qCheckBoxTd);
+		qTableRow.appendChild(qIcon);
 		qTableRow.appendChild(qName);
 		qTableRow.appendChild(qType);
+		
 	}
 }
 
 function addPage () {
-	var questionPages = document.getElementById("questionPages");
-	var qPage = document.createElement("li");
-	qPage.setAttribute("class", "qPage");
-	var qPageNumber = ++pageCounter;
-	var qPageNumberNode = document.createTextNode(qPageNumber);
-	
-	qPage.onclick = function(){displayQuestions(qPageNumber)};
-	qPage.appendChild(qPageNumberNode);
-	questionPages.appendChild(qPage);
+	if (qArray.length > questionsPerPage) {
+		var questionPages = document.getElementById("questionPages");
+		var qPage = document.createElement("li");
+		qPage.setAttribute("class", "qPage");
+		var qPageNumber = ++pageCounter;
+		var qPageNumberNode = document.createTextNode(qPageNumber);
+		
+		qPage.onclick = function(){displayQuestions(qPageNumber)};
+		qPage.appendChild(qPageNumberNode);
+		questionPages.appendChild(qPage);
+	}
 }
 
 function displayQuestions (startQ, inc = questionsPerPage) {
